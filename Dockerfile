@@ -14,5 +14,5 @@ FROM fedora:latest
 COPY --from=build release/websocat /usr/bin/
 
 RUN dnf upgrade --refresh -y && \
-    dnf install curl wget -y && \
+    dnf install curl wget socat -y && \
     dnf clean all -y
